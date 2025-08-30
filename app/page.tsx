@@ -64,14 +64,14 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="md:h-[90vh] relative overflow-hidden hero-solid-slate grain-texture">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-24 lg:py-32 flex items-center justify-center h-full">
+      <section className="md:h-screen relative overflow-hidden hero-solid-slate grain-texture">
+        <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 mb-20 h-full">
           <div className={`text-center transition-all duration-1000 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
             <Badge variant="secondary" className="mb-4 sm:mb-6 px-4 py-2 bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
               <Bot className="w-4 h-4 mr-2" />
               AI-Powered Email Builder
             </Badge>
-            <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-balance mb-4 sm:mb-6">
+            <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-balance mb-4 sm:mb-6">
               <span className="text-white">Build Emails with</span>{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-400 bg-clip-text text-transparent">
                 AI Intelligence
@@ -103,7 +103,7 @@ export default function LandingPage() {
         </div>
 
         {/* Floating mockup */}
-        <div className="hidden sm:block absolute inset-x-0 bottom-0 transform translate-y-1/3">
+        <div className="hidden pt-[200px] absolute inset-x-0 bottom-0 transform translate-y-1/3">
           <div className="max-w-[90%] lg:max-w-[80%] mx-auto px-4">
             <div className="animate-float relative">
               <div className="absolute -inset-4 bg-emerald-500/30 rounded-2xl blur-2xl"></div>
