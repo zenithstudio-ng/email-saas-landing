@@ -207,7 +207,7 @@ export default function LandingPage() {
             </div>
 
             {/* Feature 2: AI Template Library */}
-            <div className="h-auto md:min-h-[80vh]  flex items-center pb-4">
+            <div className="h-auto md:min-h-[80vh] pt-20 md:pt-4 flex items-center pb-4">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="lg:order-2">
                   <div className="flex items-center mb-6">
@@ -284,7 +284,7 @@ export default function LandingPage() {
             </div>
 
             {/* Feature 3: AI TestLab */}
-            <div className="h-auto md:min-h-[80vh]  flex items-center pb-4">
+            <div className="h-auto md:min-h-[80vh] mt-20 md:mt-4 flex items-center pb-4">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="flex items-center mb-6">
