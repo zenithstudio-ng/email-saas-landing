@@ -39,7 +39,7 @@ export default function LandingPage() {
               {/* <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <Mail className="w-5 h-5 text-primary-foreground" />
               </div> */}
-              <span className="text-xl font-bold text-foreground">Dash9</span>
+              <span className="text-xl sm:text-4xl font-bold text-foreground">The<span className="text-emerald-600">Xone</span></span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -64,8 +64,8 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="md:h-screen relative overflow-hidden hero-solid-slate grain-texture">
-        <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 mb-20 h-full">
+      <section className="h-screen flex justify-center items-center overflow-hidden hero-solid-slate grain-texture">
+        <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 md:mb-12">
           <div className={`text-center transition-all duration-1000 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
             <Badge variant="secondary" className="mb-4 sm:mb-6 px-4 py-2 bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
               <Bot className="w-4 h-4 mr-2" />
@@ -90,37 +90,28 @@ export default function LandingPage() {
                 Join the Waitlist
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto px-6 sm:px-8 py-4 text-base sm:text-lg bg-transparent border-slate-600 text-slate-300 hover:bg-slate-800 relative group"
-              >
-                <Eye className="mr-2 w-5 h-5" />
-                Watch AI Demo
-              </Button>
+              <div className="relative">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-4 text-base sm:text-lg bg-transparent border-slate-600 text-slate-300 hover:bg-slate-800 relative group opacity-50 cursor-not-allowed"
+                  disabled
+                >
+                  <Eye className="mr-2 w-5 h-5" />
+                  Watch AI Demo
+                </Button>
+                <Badge 
+                  variant="secondary" 
+                  className="absolute -top-3 -right-3 bg-slate-800 text-slate-300 border-slate-600"
+                >
+                  Coming Soon
+                </Badge>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Floating mockup */}
-        <div className="hidden pt-[200px] absolute inset-x-0 bottom-0 transform translate-y-1/3">
-          <div className="max-w-[90%] lg:max-w-[80%] mx-auto px-4">
-            <div className="animate-float relative">
-              <div className="absolute -inset-4 bg-emerald-500/30 rounded-2xl blur-2xl"></div>
-              <div className="absolute -inset-2 bg-emerald-400/20 rounded-xl blur-xl"></div>
-              <img
-                src="https://res.cloudinary.com/dsaqsxtup/image/upload/v1756546963/Screenshot_2025-08-30_at_2.42.24_AM_rr6qkq.png"
-                alt="AI Email Builder Dashboard"
-                className="relative w-full h-auto rounded-xl shadow-2xl border border-emerald-500/30"
-                style={{
-                  maxWidth: '100%',
-                  height: 'auto',
-                  boxShadow: '0 0 40px -10px rgba(16, 185, 129, 0.3)'
-                }}
-              />
-            </div>
-          </div>
-        </div>
+      
       </section>
 
       {/* Features Section */}
@@ -141,10 +132,10 @@ export default function LandingPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-violet-500/20 flex items-center justify-center mr-4">
-                      <GitBranch className="w-6 h-6 text-violet-400" />
+                    <div className="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center mr-4">
+                      <GitBranch className="w-6 h-6 text-emerald-400" />
                     </div>
-                    <Badge variant="secondary" className="bg-violet-500/20 text-violet-300 border-violet-500/30">
+                    <Badge variant="secondary" className="bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
                       AI-Powered
                     </Badge>
                   </div>
@@ -169,7 +160,7 @@ export default function LandingPage() {
                   </div>
                   <Button 
                     size="lg" 
-                    className="bg-violet-600 hover:bg-violet-700"
+                    className="bg-emerald-600 hover:bg-emerald-700"
                     onClick={() => setShowWaitlist(true)}
                   >
                     <UserPlus className="mr-2 w-5 h-5" />
@@ -178,13 +169,13 @@ export default function LandingPage() {
                   </Button>
                 </div>
                 <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-purple-500/20 rounded-xl blur-xl"></div>
-                <Card className="relative bg-card/50 backdrop-blur-sm border-violet-500/30">
+                <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-emerald-500/20 rounded-xl blur-xl"></div>
+                <Card className="relative bg-card/50 backdrop-blur-sm border-emerald-500/30">
                   <CardContent className="p-6">
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
-                          <GitBranch className="w-4 h-4 text-violet-400" />
+                          <GitBranch className="w-4 h-4 text-emerald-400" />
                           <span className="font-medium">newsletter-campaign</span>
                         </div>
                         <Badge variant="secondary" className="bg-green-500/20 text-green-400">
@@ -201,11 +192,11 @@ export default function LandingPage() {
                         </div>
                         <div className="flex items-center justify-between text-sm">
                           <span>🔀 ai-subject-test</span>
-                          <span className="text-violet-400">Testing</span>
+                          <span className="text-emerald-400">Testing</span>
                         </div>
                         <div className="flex items-center justify-between text-sm">
                           <span>✨ personalization</span>
-                          <span className="text-blue-400">Ready</span>
+                          <span className="text-emerald-400">Ready</span>
                         </div>
                       </div>
                     </div>
@@ -220,10 +211,10 @@ export default function LandingPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="lg:order-2">
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mr-4">
-                      <Code className="w-6 h-6 text-blue-400" />
+                    <div className="w-12 h-12 rounded-lg bg-emerald-500/20 flex items-center justify-center mr-4">
+                      <Code className="w-6 h-6 text-emerald-400" />
                     </div>
-                    <Badge variant="secondary" className="bg-blue-500/20 text-blue-300 border-blue-500/30">
+                    <Badge variant="secondary" className="bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
                       Community Driven
                     </Badge>
                   </div>
@@ -234,21 +225,21 @@ export default function LandingPage() {
                   </p>
                   <div className="space-y-3 mb-8">
                     <div className="flex items-center text-sm">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
                       <span>AI generates templates from simple descriptions</span>
                     </div>
                     <div className="flex items-center text-sm">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
                       <span>Automatic brand consistency across templates</span>
                     </div>
                     <div className="flex items-center text-sm">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
                       <span>Smart template recommendations based on goals</span>
                     </div>
                   </div>
                   <Button 
                     size="lg" 
-                    className="bg-blue-600 hover:bg-blue-700"
+                    className="bg-emerald-600 hover:bg-emerald-700"
                     onClick={() => setShowWaitlist(true)}
                   >
                     <UserPlus className="mr-2 w-5 h-5" />
@@ -257,18 +248,18 @@ export default function LandingPage() {
                   </Button>
                 </div>
                 <div className="lg:order-1 relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl blur-xl"></div>
-                  <Card className="relative bg-card/50 backdrop-blur-sm border-blue-500/30">
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-emerald-500/20 rounded-xl blur-xl"></div>
+                  <Card className="relative bg-card/50 backdrop-blur-sm border-emerald-500/30">
                     <CardContent className="p-6">
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
                           <span className="font-medium">AI Template Generator</span>
-                          <Badge variant="secondary" className="bg-blue-500/20 text-blue-400">
+                          <Badge variant="secondary" className="bg-emerald-500/20 text-emerald-400">
                             Live
                           </Badge>
                         </div>
                         <div className="bg-slate-800 rounded-lg p-4 text-sm">
-                          <div className="text-blue-400 mb-2">Prompt:</div>
+                          <div className="text-emerald-400 mb-2">Prompt:</div>
                           <div className="text-slate-300">"Create a welcome email for SaaS onboarding"</div>
                         </div>
                         <div className="space-y-2">
@@ -282,7 +273,7 @@ export default function LandingPage() {
                           </div>
                           <div className="flex items-center justify-between text-sm">
                             <span>🔗 CTA Optimized</span>
-                            <span className="text-violet-400">Generating...</span>
+                            <span className="text-emerald-400">Generating...</span>
                           </div>
                         </div>
                       </div>
@@ -358,9 +349,9 @@ export default function LandingPage() {
                             <div className="text-muted-foreground">Engagement</div>
                             <div className="flex items-center">
                               <div className="w-full bg-slate-700 rounded-full h-2 mr-2">
-                                <div className="bg-blue-400 h-2 rounded-full" style={{ width: "87%" }}></div>
+                                <div className="bg-emerald-400 h-2 rounded-full" style={{ width: "87%" }}></div>
                               </div>
-                              <span className="text-blue-400">87%</span>
+                              <span className="text-emerald-400">87%</span>
                             </div>
                           </div>
                         </div>
@@ -476,7 +467,7 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="px-8 py-4 text-lg bg-violet-600 hover:bg-violet-700 animate-glow"
+              className="px-8 py-4 text-lg bg-emerald-600 hover:bg-emerald-700 animate-glow"
               onClick={() => setShowWaitlist(true)}
             >
               <UserPlus className="mr-2 w-5 h-5" />
