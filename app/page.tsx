@@ -64,7 +64,7 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="h-screen flex justify-center items-center overflow-hidden hero-solid-slate grain-texture">
+      <section className="md:h-screen flex justify-center items-center overflow-hidden hero-solid-slate grain-texture">
         <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-12 py-20 sm:py-24 lg:py-32 md:mb-12">
           <div className={`text-center transition-all duration-1000 ${isVisible ? "animate-slide-up" : "opacity-0"}`}>
             <Badge variant="secondary" className="mb-4 sm:mb-6 px-4 py-2 bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
@@ -115,7 +115,7 @@ export default function LandingPage() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 lg:py-32 mt-32">
+      <section id="features" className="py-20 lg:py-32 md:mt-32">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-7xl font-bold text-balance mb-6">
