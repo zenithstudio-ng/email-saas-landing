@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { CheckCircle, Search, MessageCircle, Mail } from "lucide-react"
+import { generateThankYouEmailTemplate, sendEmail } from "@/lib/email"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { createClient } from '@supabase/supabase-js';
@@ -274,17 +275,18 @@ export function WaitlistDialog({ open, onOpenChange }: WaitlistDialogProps) {
 
       if (error) throw error
 
-      // Send thank you email
+      // Send thank you email using EmailJS
       try {
-        const whatsappLink = "https://chat.whatsapp.com/example-invite-code";
+        const whatsappLink = "https://chat.whatsapp.com/GjPAB4kUxRg9WBLINTFbuj?mode=ems_copy_c";
         const emailTemplate = generateThankYouEmailTemplate(fullName, whatsappLink);
         await sendEmail({
           to: email,
           subject: "Welcome to TheXone Waitlist!",
           html: emailTemplate
         });
+        console.log(`Thank you email sent to ${email} using EmailJS`);
       } catch (emailError) {
-        console.error("Failed to send thank you email:", emailError);
+        console.error("Failed to send thank you email with EmailJS:", emailError);
         // Continue with success flow even if email fails
       }
 
@@ -430,7 +432,7 @@ export function WaitlistDialog({ open, onOpenChange }: WaitlistDialogProps) {
                   Connect with other early adopters and get exclusive updates about TheXone.
                 </p>
                 <a 
-                  href="https://chat.whatsapp.com/example-invite-code" 
+                  href="https://chat.whatsapp.com/GjPAB4kUxRg9WBLINTFbuj?mode=ems_copy_c" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full"

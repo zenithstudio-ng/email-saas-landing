@@ -45,19 +45,19 @@ export default function LandingPage() {
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
                 Features
               </a>
-              <a href="#community" className="text-muted-foreground hover:text-foreground transition-colors">
+              {/* <a href="#community" className="text-muted-foreground hover:text-foreground transition-colors">
                 Community
               </a>
               <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
                 Pricing
-              </a>
-              <Button variant="outline" size="sm">
+              </a> */}
+              {/* <Button variant="outline" size="sm">
                 Sign In
-              </Button>
-              {/* <Button size="sm" onClick={() => setShowWaitlist(true)}>
+              </Button> */}
+              <Button  className="w-full sm:w-auto px-6 sm:px-8 py-4 text-base sm:text-sm bg-emerald-600 hover:bg-emerald-700" size="sm" onClick={() => setShowWaitlist(true)}>
                 <UserPlus className="mr-2 w-4 h-4" />
                 Join Waitlist
-              </Button> */}
+              </Button>
             </div>
           </div>
         </div>
@@ -369,7 +369,7 @@ export default function LandingPage() {
       </section>
 
       {/* Community Section */}
-      <section id="community" className="py-24 lg:py-32 bg-secondary/5">
+      {/* <section id="community" className="py-24 lg:py-32 bg-secondary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -379,23 +379,8 @@ export default function LandingPage() {
                 the industry.
               </p>
 
-              {/* <div className="space-y-6">
-                {[
-                  { label: "Active Templates", value: "12,847", icon: Code },
-                  { label: "Community Members", value: "45,231", icon: Users },
-                  { label: "Repositories Created", value: "8,492", icon: GitBranch },
-                ].map((stat, index) => (
-                  <div key={index} className="flex items-center space-x-4">
-                    <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
-                      <stat.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-foreground">{stat.value}</div>
-                      <div className="text-muted-foreground">{stat.label}</div>
-                    </div>
-                  </div>
-                ))}
-              </div> */}
+            
+            
             </div>
 
             <div className="space-y-4">
@@ -455,10 +440,10 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="py-24 lg:py-32">
+      {/* <section className="py-24 lg:py-32">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-5xl font-bold text-balance mb-6">Ready to build emails with AI?</h2>
           <p className="text-xl text-muted-foreground text-balance mb-8 leading-relaxed">
@@ -485,53 +470,27 @@ export default function LandingPage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="border-t border-border/50 bg-secondary/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-primary-foreground" />
-                </div>
-                <span className="text-xl font-bold text-foreground">EmailHub</span>
-              </div>
-              <p className="text-muted-foreground">The future of email management is here.</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col items-center justify-center text-center">
+            <div className="flex items-center space-x-2 mb-4">
+              <span className="text-xl font-bold text-foreground">The<span className="text-emerald-600">Xone</span></span>
             </div>
-
-            {[
-              {
-                title: "Product",
-                links: ["Features", "Templates", "TestLab", "Pricing"],
-              },
-              {
-                title: "Community",
-                links: ["GitHub", "Discord", "Forum", "Blog"],
-              },
-              {
-                title: "Company",
-                links: ["About", "Careers", "Contact", "Privacy"],
-              },
-            ].map((section, index) => (
-              <div key={index}>
-                <h3 className="font-semibold text-foreground mb-4">{section.title}</h3>
-                <ul className="space-y-2">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                        {link}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="border-t border-border/50 mt-12 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 EmailHub. All rights reserved.</p>
+            <p className="text-muted-foreground mb-4">Join the waitlist to be notified when we launch.</p>
+            <Button 
+              size="lg" 
+              className="bg-emerald-600 hover:bg-emerald-700"
+              onClick={() => setShowWaitlist(true)}
+            >
+              <UserPlus className="mr-2 w-5 h-5" />
+              Join the Waitlist
+            </Button>
+            <div className="mt-8 text-sm text-muted-foreground">
+              <p>&copy; 2024 TheXone. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </footer>
